@@ -1,5 +1,5 @@
-public class Aerea extends Ruta {
-    public Aerea(Terminal origen, Terminal destino, float distancia, float consumo, float tarifa, float tiempo) {
+public class rutaAerea extends Ruta {
+    public rutaAerea(Terminal origen, Terminal destino, float distancia, float consumo, float tarifa, float tiempo) {
         this.origen = origen;
         this.destino = destino;
         this.distancia = distancia;
