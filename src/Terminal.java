@@ -33,7 +33,7 @@ public abstract class Terminal {
     }
     
     public ArrayList<Ruta> obtenerRutas() {
-        return rutas;
+        return this.rutas;
     }
 
     public ArrayList<String> obtenerTransporteSoportado() {
