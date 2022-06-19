@@ -1,8 +1,7 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class Terrestre extends Terminal {
-    public Terrestre(String nombre, String direccion, String telefono, int maxPasajeros ,Ciudad ciudad, List<Ruta> rutas) {
+    public Terrestre(String nombre, String direccion, String telefono, int maxPasajeros, Ciudad ciudad, ArrayList<Ruta> rutas) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;

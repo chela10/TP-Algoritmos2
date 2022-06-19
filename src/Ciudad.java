@@ -1,4 +1,4 @@
-import java.util.List;
+import java.util.ArrayList;
 public class Ciudad {
 
     // Atributos
@@ -6,11 +6,11 @@ public class Ciudad {
     private String nombre;
     private String pais;
     private int cantHabitantes;
-    private List<Terminal> terminales;
+    private ArrayList<Terminal> terminales;
     private float precioLitro;
 
     // Metodos
-    public Ciudad(int id, String nombre, String pais, int cantHabitantes, List<Terminal> terminales, float precioLitro) {
+    public Ciudad(int id, String nombre, String pais, int cantHabitantes, ArrayList<Terminal> terminales, float precioLitro) {
         this.id = id;
         this.nombre = nombre;
         this.pais = pais;
@@ -31,7 +31,7 @@ public class Ciudad {
     public int obtenerCantHabitantes() {
         return this.cantHabitantes;
     }
-    public List<Terminal> obtenerTerminales() {
+    public ArrayList<Terminal> obtenerTerminales() {
         return this.terminales;
     }
     public float obtenerPrecioLitro() {

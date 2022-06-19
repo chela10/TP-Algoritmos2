@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public abstract class Terminal {
     // Atributos
@@ -8,7 +7,7 @@ public abstract class Terminal {
     protected String telefono;
     protected int maxPasajeros;
     protected Ciudad ciudad;
-    protected List<Ruta> rutas;
+    protected ArrayList<Ruta> rutas;
     protected ArrayList<String> TransporteSoportado;
 
     // Metodos
@@ -33,7 +32,7 @@ public abstract class Terminal {
         return this.ciudad;
     }
     
-    public List<Ruta> obtenerRutas() {
+    public ArrayList<Ruta> obtenerRutas() {
         return rutas;
     }
 

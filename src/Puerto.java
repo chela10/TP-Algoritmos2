@@ -1,8 +1,7 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class Puerto extends Terminal {
-    public Puerto(String nombre, String direccion, String telefono, int maxPasajeros, Ciudad ciudad, List<Ruta> rutas) {
+    public Puerto(String nombre, String direccion, String telefono, int maxPasajeros, Ciudad ciudad, ArrayList<Ruta> rutas) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
