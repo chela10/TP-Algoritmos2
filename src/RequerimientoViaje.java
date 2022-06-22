@@ -1,3 +1,4 @@
-public interface RequerimientoViaje {
-    boolean validar(Viaje v);
+public abstract class RequerimientoViaje {
+    protected String tipo_requerimiento;
+    abstract boolean validar(Viaje v);
 }

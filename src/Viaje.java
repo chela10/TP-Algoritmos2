@@ -14,6 +14,21 @@ public class Viaje {
         this.recorridos = recorridos;
     }
 
+    public Ciudad obtenerOrigen() {
+        return this.origen;
+    }
+    public Ciudad obtenerDestino() {
+        return this.destino;
+    }
+
+    public double obtenerPresupuesto() {
+        return this.presupuesto;
+    }
+
+    public ArrayList<RequerimientoViaje> obtenerRequerimientosOpcionales() {
+        return this.requerimientosOpcionales;
+    }
+
     public ArrayList<Terminal> obtenerRecorridos() {
         return this.recorridos;
     }

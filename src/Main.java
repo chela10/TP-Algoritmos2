@@ -27,7 +27,8 @@ public class Main {
         Grafo mapa = new Grafo();
         mapa.agregarPais(pais1);
         mapa.agregarPais(pais2);
-        Menu menu = new Menu(mapa);
+        SimuladorViaje viajes = new SimuladorViaje(mapa);
+        Menu menu = new Menu(viajes);
         menu.loopPrincipal(null);
     
     }
