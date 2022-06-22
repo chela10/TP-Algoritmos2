@@ -37,7 +37,7 @@ public abstract class Terminal {
     }
 
     public ArrayList<String> obtenerTransporteSoportado() {
-        return TransporteSoportado;
+        return this.TransporteSoportado;
     }
     public void establecerCiudad(Ciudad ciudad) {
         this.ciudad = ciudad;

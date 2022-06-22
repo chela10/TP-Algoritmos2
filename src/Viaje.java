@@ -5,6 +5,7 @@ public class Viaje {
     private Ciudad origen, destino;
     private ArrayList<RequerimientoViaje> requerimientosOpcionales = new ArrayList<>();
     private ArrayList<Terminal> recorridos = new ArrayList<>();
+    private ArrayList<Ruta> rutasUtilizadas = new ArrayList<>(); // puede q no sea necesario, en principio es para mostrar las rutas utilizadas del viaje en la opcion 3
 
     public Viaje(double presupuesto, Ciudad origen, Ciudad destino, ArrayList<RequerimientoViaje> requerimientosOpcionales, ArrayList<Terminal> recorridos) {
         this.presupuesto = presupuesto;
@@ -31,6 +32,16 @@ public class Viaje {
 
     public ArrayList<Terminal> obtenerRecorridos() {
         return this.recorridos;
+    }
+
+    public ArrayList<Ruta> obtenerRutasUtilizadas() {
+        return this.rutasUtilizadas;
+    }
+
+    public void agregarRutaUtilizada(Ruta ruta) {
+        if(!this.rutasUtilizadas.contains(ruta)) {
+            this.rutasUtilizadas.add(ruta);
+        }
     }
 
 }

@@ -76,12 +76,40 @@ public class Menu {
         }
     }
 
+    private void mostrarDetallesViaje(Viaje viajeElegido) {
+        ArrayList<Ruta> rutasRecorridas = viajeElegido.obtenerRutasUtilizadas();
+        float distanciaFinal = 0;
+        float consumoFinal = 0;
+        float tarifaFinal = 0;
+        float tiempoFinal = 0;
+        for (Ruta ruta : rutasRecorridas) {
+            distanciaFinal += ruta.obtenerDistancia();
+            consumoFinal += ruta.obtenerConsumo();
+            tarifaFinal += ruta.obtenerTarifa();
+            tiempoFinal += ruta.obtenerTiempo();
+        }
+        System.out.println("Distancia final: " + distanciaFinal);
+        System.out.println("Consumo final: " + consumoFinal);
+        System.out.println("Tarifa final: " + tarifaFinal);
+        System.out.println("Tiempo total: " + tiempoFinal);
+    }
+
+    private void mostrarTerminalesRecorridas(Viaje viaje) { // ver el caso q haya mas de un camino
+        ArrayList<Terminal> temrinalesRecorridas = viaje.obtenerRecorridos();
+        System.out.print("Terminales utilizadas: " );
+        for (Terminal terminal : temrinalesRecorridas) {
+            System.out.print(terminal.obtenerNombre() + "-");
+        } 
+    }
+
     private void procesarViajeSeleccionado(int opcionIngresada, Viaje viajeElegido) {
         System.out.println("Informacion del viaje");
         System.out.println("Presupuesto: " +  viajeElegido.obtenerPresupuesto());
         System.out.println("Origen y destino: " +  viajeElegido.obtenerOrigen().obtenerNombre() + " " + viajeElegido.obtenerDestino().obtenerNombre());
+        this.mostrarDetallesViaje(viajeElegido);
+        this.mostrarTerminalesRecorridas(viajeElegido);
         System.out.println("Requerimientos opcionales");
-        this.mostrarRequisitosOpcionales(viajeElegido.obtenerRequerimientosOpcionales()); // falta rutas, distancia, tarifa, consumo, etc
+        this.mostrarRequisitosOpcionales(viajeElegido.obtenerRequerimientosOpcionales());
 
     }
 
