@@ -1,24 +1,27 @@
 import java.util.ArrayList;
 
 public class Grafo {
-    private ArrayList<Ciudad> nodos = new ArrayList<>();
-    private ArrayList<Ruta> aristas = new ArrayList<>();
-
-    public void agregarCiudad(Ciudad ciudad) {
-        this.nodos.add(ciudad);
+    private ArrayList<Pais> nodos = new ArrayList<>();
+    
+    public ArrayList<Pais> obtenerNodos() {
+        return this.nodos;
     }
-    public void agregarRuta(Ruta ruta) { // ver lo de bidireccional
+    public void agregarPais(Pais pais) {
+        if(!this.nodos.contains(pais)) {
+            this.nodos.add(pais);
+        }
+    }
+    /*public void agregarRuta(Ruta ruta) { // ver lo de bidireccional
         this.aristas.add(ruta);
-    }
+    }*/
 
-    public boolean existeCiudad(String nombre) {
+    public boolean existePais(String nombre) {
         if(this.nodos.isEmpty()) {
-            System.out.println("La ciudad no existe porque el mapa esta vacio");
-            return false;
+            System.out.println("El pais no existe porque el mapa esta vacio");
         }
         else {
-            for (Ciudad ciudad : this.nodos) {
-                if(ciudad.obtenerNombre() == nombre) {
+            for (Pais pais : this.nodos) {
+                if(pais.obtenerPais() == nombre) {
                     return true;
                 }
             }
@@ -26,7 +29,7 @@ public class Grafo {
         return false;
     }
 
-    public boolean existeRuta(Terminal origen, Terminal destino) {
+    /*public boolean existeRuta(Terminal origen, Terminal destino) {
         if (this.aristas.isEmpty()) {
             System.out.println("La ruta no existe porque el mapa esta vacio");
             return false;
@@ -39,20 +42,20 @@ public class Grafo {
             }
         }
         return false;
-    }
+    }*/
 
-    public Ciudad obtenerCiudad(String nombre) {
+    public Pais obtenerPais(String nombre) {
         if(!this.nodos.isEmpty()) {
-            for (Ciudad ciudad : this.nodos) {
-                if(ciudad.obtenerNombre() == nombre) {
-                    return ciudad;
+            for (Pais pais : this.nodos) {
+                if(pais.obtenerPais() == nombre) {
+                    return pais;
                 }
             }
         }
         return null;
     }
 
-    public Ruta obtenerRuta(Terminal origen, Terminal destino) { // chequear
+    /*public Ruta obtenerRuta(Terminal origen, Terminal destino) { // chequear
         if(!this.aristas.isEmpty()) {
             for (Ruta ruta : this.aristas) {
                 if(ruta.obtenerOrigen() == origen && ruta.obtenerDestino() == destino) {
@@ -61,5 +64,5 @@ public class Grafo {
             }
         }
         return null;
-    }
+    }*/
 }

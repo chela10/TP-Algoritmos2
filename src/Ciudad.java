@@ -4,13 +4,13 @@ public class Ciudad {
     // Atributos
     private int id;
     private String nombre;
-    private String pais;
+    private Pais pais;
     private int cantHabitantes;
     private ArrayList<Terminal> terminales;
     private float precioLitro;
 
     // Metodos
-    public Ciudad(int id, String nombre, String pais, int cantHabitantes, ArrayList<Terminal> terminales, float precioLitro) {
+    public Ciudad(int id, String nombre, Pais pais, int cantHabitantes, ArrayList<Terminal> terminales, float precioLitro) {
         this.id = id;
         this.nombre = nombre;
         this.pais = pais;
@@ -25,7 +25,7 @@ public class Ciudad {
     public String obtenerNombre() {
         return this.nombre;
     }
-    public String obtenerPais() {
+    public Pais obtenerPais() {
         return this.pais;
     }
     public int obtenerCantHabitantes() {
@@ -38,7 +38,7 @@ public class Ciudad {
         return this.precioLitro;
     }
 
-    public boolean equalsTo(Ciudad ciudad) {
+    public boolean equalsTo(Ciudad ciudad) { // cambiar a .equals
         return this.id == ciudad.obtenerId() && this.nombre == ciudad.obtenerNombre() && this.pais == ciudad.obtenerPais() && 
         this.cantHabitantes == ciudad.obtenerCantHabitantes() && 
         this.terminales == ciudad.obtenerTerminales() && 

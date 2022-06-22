@@ -1,12 +1,11 @@
 import java.util.ArrayList;
 
 public class Aeropuerto extends Terminal {
-    public Aeropuerto(String nombre, String direccion, String telefono, int maxPasajeros, Ciudad ciudad, ArrayList<Ruta> rutas) {
+    public Aeropuerto(String nombre, String direccion, String telefono, int maxPasajeros, ArrayList<Ruta> rutas) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
         this.maxPasajeros = maxPasajeros;
-        this.ciudad = ciudad;
         this.rutas = rutas;
         this.TransporteSoportado = new ArrayList<String>();
         this.TransporteSoportado.add("Avion");
