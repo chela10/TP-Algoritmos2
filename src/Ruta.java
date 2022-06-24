@@ -4,8 +4,8 @@ public abstract class Ruta {
     protected Terminal destino;
     protected float distancia;
     protected float consumo;
-    protected float tarifa;
-    protected float tiempo;
+    protected double tarifa;
+    protected double tiempo;
     
     // Metodos
 
@@ -25,11 +25,11 @@ public abstract class Ruta {
         return this.consumo;
     }
 
-    public float obtenerTarifa() {
+    public double obtenerTarifa() {
         return this.tarifa;
     }
 
-    public float obtenerTiempo() {
+    public double obtenerTiempo() {
         return this.tiempo;
     }
 }

@@ -1,5 +1,5 @@
 public class rutaFerroviaria extends Ruta {
-    public rutaFerroviaria(Terminal origen, Terminal destino, float distancia, float consumo, float tarifa, float tiempo) {
+    public rutaFerroviaria(Terminal origen, Terminal destino, float distancia, float consumo, double tarifa, double tiempo) {
         this.origen = origen;
         this.destino = destino;
         this.distancia = distancia;
